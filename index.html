@@ -6,7 +6,9 @@
     <title>Title</title>
     <link rel="stylesheet" href="css/chat.css">
     <link rel="stylesheet" href="css/s.css">
+    <link rel="stylesheet" href="http://chat.0x1.ren/css/OwO.css">
     <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/OwO.js"></script>
 </head>
 <body>
 <header id="chat-header">
@@ -60,13 +62,41 @@
     <li class="chat chat-type-public"></li>
 </ul>
 <footer id="chat-footer">
-    <p>这是个放输入框的地方</p>
+    <div class="chat-input">
+        <textarea type="text"></textarea>
+        <button type="button">发送</button>
+    </div>
+    <div class="chat-more">
+        <div class="OwO"></div>
+    </div>
 </footer>
 
 <script>
-    
+    new OwO({
+        logo: '表情',
+        container: $('.OwO').get(0),
+        target: $('OwO-textarea').get(0),
+        api: 'js/OwO.json',
+        position: 'down',
+        width: '100%',
+        maxHeight: '250px'
+    });
+
+    $(".OwO").click(function () {
+        console.log($('.OwO').hasClass('OwO-open'));
+        if($('.OwO').hasClass('OwO-open')) {
+            $('#chat-list').css('height', '55%');
+            $('#chat-footer').css('height', '48%');
+        }else {
+            $('#chat-list').css('height', '92%');
+            $('#chat-footer').css('height', '12%');
+        }
+    })
+
+
+
     //const socket = new WebSocket('ws://192.168.10.10:9501');
-    const data = {
+    /*const data = {
         type: 'message',
         name: 'flx',
         sex: 1,
@@ -93,7 +123,7 @@
     socket.addEventListener('error', function (event) {
         console.log('服务器开小差了，刷新试试咩~');
         console.log(event);
-    })
+    })*/
 
 </script>
 </body>

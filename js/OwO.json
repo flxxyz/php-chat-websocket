@@ -1,0 +1,348 @@
+
+
+{
+  "颜文字": {
+    "type": "emoticon",
+    "container": [
+      {
+        "icon": "OωO",
+        "text": "Author: DIYgod"
+      },
+      {
+        "icon": "|´・ω・)ノ",
+        "text": "Hi"
+      },
+      {
+        "icon": "ヾ(≧∇≦*)ゝ",
+        "text": "开心"
+      },
+      {
+        "icon": "(☆ω☆)",
+        "text": "星星眼"
+      },
+      {
+        "icon": "（╯‵□′）╯︵┴─┴",
+        "text": "掀桌"
+      },
+      {
+        "icon": "￣﹃￣",
+        "text": "流口水"
+      },
+      {
+        "icon": "(/ω＼)",
+        "text": "捂脸"
+      },
+      {
+        "icon": "∠( ᐛ 」∠)＿",
+        "text": "给跪"
+      },
+      {
+        "icon": "(๑•̀ㅁ•́ฅ)",
+        "text": "Hi"
+      },
+      {
+        "icon": "→_→",
+        "text": "斜眼"
+      },
+      {
+        "icon": "୧(๑•̀⌄•́๑)૭",
+        "text": "加油"
+      },
+      {
+        "icon": "٩(ˊᗜˋ*)و",
+        "text": "有木有WiFi"
+      },
+      {
+        "icon": "(ノ°ο°)ノ",
+        "text": "前方高能预警"
+      },
+      {
+        "icon": "(´இ皿இ｀)",
+        "text": "我从未见过如此厚颜无耻之人"
+      },
+      {
+        "icon": "⌇●﹏●⌇",
+        "text": "吓死宝宝惹"
+      },
+      {
+        "icon": "(ฅ´ω`ฅ)",
+        "text": "已阅留爪"
+      },
+      {
+        "icon": "(╯°A°)╯︵○○○",
+        "text": "去吧大师球"
+      },
+      {
+        "icon": "φ(￣∇￣o)",
+        "text": "太萌惹"
+      },
+      {
+        "icon": "ヾ(´･ ･｀｡)ノ\"",
+        "text": "咦咦咦"
+      },
+      {
+        "icon": "( ง ᵒ̌皿ᵒ̌)ง⁼³₌₃",
+        "text": "气呼呼"
+      },
+      {
+        "icon": "(ó﹏ò｡)",
+        "text": "我受到了惊吓"
+      },
+      {
+        "icon": "Σ(っ °Д °;)っ",
+        "text": "什么鬼"
+      },
+      {
+        "icon": "( ,,´･ω･)ﾉ\"(´っω･｀｡)",
+        "text": "摸摸头"
+      },
+      {
+        "icon": "╮(╯▽╰)╭ ",
+        "text": "无奈"
+      },
+      {
+        "icon": "o(*////▽////*)q ",
+        "text": "脸红"
+      },
+      {
+        "icon": "＞﹏＜",
+        "text": ""
+      },
+      {
+        "icon": "( ๑´•ω•) \"(ㆆᴗㆆ)",
+        "text": ""
+      },
+      {
+        "icon": "(｡•ˇ‸ˇ•｡)",
+        "text": ""
+      }
+    ]
+  },
+  "Emoji": {
+    "type": "emoji",
+    "container": [
+      {
+        "icon": "😂",
+        "text": ""
+      },
+      {
+        "icon": "😀",
+        "text": ""
+      },
+      {
+        "icon": "😅",
+        "text": ""
+      },
+      {
+        "icon": "😊",
+        "text": ""
+      },
+      {
+        "icon": "🙂",
+        "text": ""
+      },
+      {
+        "icon": "🙃",
+        "text": ""
+      },
+      {
+        "icon": "😌",
+        "text": ""
+      },
+      {
+        "icon": "😍",
+        "text": ""
+      },
+      {
+        "icon": "😘 ",
+        "text": ""
+      },
+      {
+        "icon": "😜",
+        "text": ""
+      },
+      {
+        "icon": "😝",
+        "text": ""
+      },
+      {
+        "icon": "😏",
+        "text": ""
+      },
+      {
+        "icon": "😒",
+        "text": ""
+      },
+      {
+        "icon": "🙄",
+        "text": ""
+      },
+      {
+        "icon": "😳 ",
+        "text": ""
+      },
+      {
+        "icon": "😡",
+        "text": ""
+      },
+      {
+        "icon": "😔",
+        "text": ""
+      },
+      {
+        "icon": "😫",
+        "text": ""
+      },
+      {
+        "icon": "😱",
+        "text": ""
+      },
+      {
+        "icon": "😭",
+        "text": ""
+      },
+      {
+        "icon": "💩",
+        "text": ""
+      },
+      {
+        "icon": "👻",
+        "text": ""
+      },
+      {
+        "icon": "🙌",
+        "text": ""
+      },
+      {
+        "icon": "🖕",
+        "text": ""
+      },
+      {
+        "icon": "👍",
+        "text": ""
+      },
+      {
+        "icon": "👫",
+        "text": ""
+      },
+      {
+        "icon": "👬",
+        "text": ""
+      },
+      {
+        "icon": "👭",
+        "text": ""
+      },
+      {
+        "icon": "🌚",
+        "text": ""
+      },
+      {
+        "icon": "🌝",
+        "text": ""
+      },
+      {
+        "icon": "🙈",
+        "text": ""
+      },
+      {
+        "icon": "💊",
+        "text": ""
+      },
+      {
+        "icon": "😶",
+        "text": ""
+      },
+      {
+        "icon": "🙏",
+        "text": ""
+      },
+      {
+        "icon": "🍦",
+        "text": ""
+      },
+      {
+        "icon": "🍉",
+        "text": ""
+      },
+      {
+        "icon": "😣",
+        "text": ""
+      }
+    ]
+  },
+  "图片表情": {
+    "type": "image",
+    "container": [
+      {
+        "icon": "<img src=\"https://ws2.sinaimg.cn/large/8856eac7gy1ff3uwtx6bwj20ai0dr0t5.jpg\">",
+        "text": "face1"
+      },
+      {
+        "icon": "<img src=\"https://ws3.sinaimg.cn/large/8856eac7gy1ff4qp6hkjsj206705d0sq.jpg\">",
+        "text": "face2"
+      },
+      {
+        "icon": "<img src=\"https://ws2.sinaimg.cn/large/8856eac7gy1ff4qkh6m5yj208g05aglo.jpg\">",
+        "text": "face3"
+      },
+      {
+        "icon": "<img src=\"https://ws3.sinaimg.cn/large/8856eac7gy1ffd58uhwvjj203c02tglf.jpg\">",
+        "text": "face4"
+      },
+      {
+        "icon": "<img src=\"https://ws2.sinaimg.cn/large/8856eac7gy1ff13rsifh3j208c070aa2.jpg\">",
+        "text": "face5"
+      },
+      {
+        "icon": "<img src=\"https://ws1.sinaimg.cn/large/8856eac7gy1feyyc08j0jj20460420so.jpg\">",
+        "text": "face6"
+      },
+      {
+        "icon": "<img src=\"https://ws4.sinaimg.cn/large/8856eac7gy1ffd4ginb1ej206y0573ym.jpg\">",
+        "text": "face7"
+      },
+      {
+        "icon": "<img src=\"https://ws1.sinaimg.cn/large/8856eac7gy1feyyc08j0jj20460420so.jpg\">",
+        "text": "face7"
+      },
+      {
+        "icon": "<img src=\"http://img03.sogoucdn.com/app/a/100520093/e18d20c94006dfe0-2857e2f09ca9e0a0-2a3452d68f55aa33a195a39bb3dd5a55.jpg\">",
+        "text": "face7"
+      }
+    ]
+  },
+  "动图表情": {
+    "type": "image",
+    "container": [
+      {
+        "icon": "<img src=\"http://q.qqbiaoqing.com/q/2014/07/05/67d69d6235798d0266bca5af13430811.gif\">",
+        "text": "face1"
+      },
+      {
+        "icon": "<img src=\"http://q.qqbiaoqing.com/q/2011-1-11/690da2604bd91a4bdebf0560cc29f131.gif\">",
+        "text": "face2"
+      },
+      {
+        "icon": "<img src=\"http://q.qqbiaoqing.com/q/2012-6-1/2cc638a74d58633b29b7d101ae735c64.gif\">",
+        "text": "face3"
+      },
+      {
+        "icon": "<img src=\"http://q.qqbiaoqing.com/q/2014/11/20/9e5a0751af99031811f9560bb06d35bb.gif\">",
+        "text": "face4"
+      },
+      {
+        "icon": "<img src=\"http://q.qqbiaoqing.com/q/2014/02/10/e73908c5fd409b0ef5ceb98706499e2d.gif\">",
+        "text": "face5"
+      },
+      {
+        "icon": "<img src=\"http://q.qqbiaoqing.com/q/2011-9-24/3d218d3a0a3801f51628dd8052fa71f0.gif\">",
+        "text": "face6"
+      },
+      {
+        "icon": "<img src=\"http://q.qqbiaoqing.com/q/2014/08/01/1ef2b0ca78ed403e8a27fffa51f87dbe.gif\">",
+        "text": "face6"
+      }
+    ]
+  }
+}

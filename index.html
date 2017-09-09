@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Title</title>
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        html,body {
+            width: 100%;
+            height: 100%;
+        }
+        body {
+            overflow: hidden;
+        }
+        :after,:before {
+            box-sizing: border-box;
+        }
+        #chat-header {
+            position: relative;
+            top: 0;
+            left: 0;
+            padding: 8px 0;
+            width: 100%;
+            text-align: center;
+            font-size: 1em;
+            color: #fff;
+            background-color: #3097D1;
+            background-image: url(img/header_bg.png);
+        }
+        ul {
+            position: relative;
+            top: 0;
+            left: 0;
+            max-width: 100%;
+            width: 100%;
+            height: 100%;
+            background: rgb(241, 242, 247);
+        }
+        footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: #eeeeee;
+        }
+
+        .chat {
+            padding: 15px 0;
+            position: relative;
+            top: 0;
+            left: 0;
+        }
+        .chat-img {
+            position: absolute;
+            top: 25px;
+            margin-top: -10px;
+            width: 50px;
+            height: 50px;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            border-radius: 50%;
+        }
+        .chat-info {
+            font-size: .3em;
+        }
+        .chat-info > .chat-name {
+            color: rgb(144,145,149);
+        }
+        .chat-message {
+            margin: 5px 70px 0 70px;
+            word-wrap:break-word;
+            word-break:normal;
+            display: inline-block;
+            padding: 5px;
+            border: 1px solid #fff;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+            background: #fff;
+        }
+        .chat-message:after {
+            content: "";
+            position: absolute;
+            border-bottom: 8px solid rgba(255, 255, 255, 0);
+        }
+        .chat-me {
+            text-align: right;
+        }
+        .chat-me > img {
+            right: 10px;
+        }
+        .chat-me > p:after {
+            right: 60px;
+            top: 50px;
+            border-left: 12px solid #fff;
+        }
+        .chat-me > .chat-info {
+            margin-right: 70px;
+        }
+        .chat-ta {
+            text-align: left;
+        }
+        .chat-ta > img {
+            left: 10px;
+        }
+        .chat-ta > p:after {
+            left: 60px;
+            top: 50px;
+            border-right: 12px solid #fff;
+        }
+        .chat-ta > .chat-info {
+            margin-left: 70px;
+        }
+        .chat-type-message {
+
+        }
+        .chat-type-tips {
+            text-align: center;
+            font-size: .5em;
+        }
+        .chat-type-tips > span {
+            display: inline-block;
+            padding: 4px;
+            color: #ffffff;
+            background-color: #cccccc;
+            -webkit-border-radius: 7px;
+            -moz-border-radius: 7px;
+            border-radius: 7px;
+        }
+        .chat-type-system {
+            text-align: center;
+            font-size: .5em;
+        }
+        .chat-type-system > span {
+            padding: 2px 8px;
+            color: #fff;
+            background: #FF0000;
+            -webkit-border-radius: 7px;
+            -moz-border-radius: 7px;
+            border-radius: 7px;
+        }
+        .chat-type-public {
+
+        }
+    </style>
+</head>
+<body>
+<header id="chat-header">
+    <h2>标题</h2>
+</header>
+<ul id="chat-list">
+    <li class="chat chat-type-system">
+        <span>系统消息: FUCK进入房间</span>
+    </li>
+    <li class="chat chat-ta chat-type-message">
+        <img class="chat-img" src="http://api.flxxyz.com/qq/icon/2s83ge1?size=40" alt="">
+        <div class="chat-info">
+            <span class="chat-s s-1">大王</span>  <span class="chat-name">FUCK</span>
+        </div>
+        <p class="chat-message">这是他的一条消息</p>
+    </li>
+    <li class="chat chat-type-tips">
+        <span>10:21</span>
+    </li>
+    <li class="chat chat-me chat-type-message">
+        <img class="chat-img" src="http://api.flxxyz.com/qq/icon/2s83ge1?size=40" alt="">
+        <div class="chat-info">
+            <span class="chat-s s-2">小王</span>  <span class="chat-name">QQQ</span>
+        </div>
+        <p class="chat-message">这是我的一条消息</p>
+    </li>
+    <li class="chat chat-type-public"></li>
+</ul>
+<footer id="chat-footer">
+    <p>这是个放输入框的地方</p>
+</footer>
+<div id="demo-websocket">
+
+</div>
+<script>
+    
+    //const socket = new WebSocket('ws://192.168.10.10:9501');
+    const data = {
+        type: 'message',
+        name: 'flx',
+        sex: 1,
+        message: 'hello Server!',
+    };
+
+    socket.addEventListener('open', function (event) {
+        socket.send(JSON.stringify(data));
+    });
+
+    socket.addEventListener('message', function (event) {
+        let $data = JSON.parse(event.data);
+        if($data.type === 'system') {
+            alert($data.message);
+        }
+
+    })
+    
+    socket.addEventListener('close', function (event) {
+        console.log('服务器关闭，断开连接辣~');
+        console.log(event);
+    })
+    
+    socket.addEventListener('error', function (event) {
+        console.log('服务器开小差了，刷新试试咩~');
+        console.log(event);
+    })
+
+</script>
+</body>
+</html>

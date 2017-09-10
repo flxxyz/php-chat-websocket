@@ -58,7 +58,10 @@ var _createClass = function () {
                     var a = null;
                     if (e.target.classList.contains("OwO-item") ? a = e.target : e.target.parentNode.classList.contains("OwO-item") && (a = e.target.parentNode), a) {
                         var s = t.area.selectionEnd, n = t.area.value;
-                        t.area.value = n.slice(0, s) + a.innerHTML + n.slice(s), t.area.focus() //t.toggle()
+                        if(/<img.*?\>/.test(a.innerHTML)) {
+                            return;
+                        }
+                        t.area.value = n.slice(0, s) + a.innerHTML + n.slice(s),t.area.focus() //t.toggle()
                     }
                 }), this.packagesEle = this.container.getElementsByClassName("OwO-packages")[0];
                 for (var c = function (e) {

@@ -53,7 +53,7 @@ input, button, textarea{
     left: 0;
     max-width: 100%;
     width: 100%;
-    height: 80%;
+    height: 86%;
     background: #F1F2F7;
     overflow: scroll;
     overflow-x: hidden;
@@ -64,7 +64,7 @@ input, button, textarea{
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 12%;
+    height: 10%;
     background: #F1F2F7;
 }
 
@@ -194,7 +194,7 @@ input, button, textarea{
     -moz-border-radius: 7px;
     border-radius: 7px;
 }
-.chat-input > textarea {
+.chat-input > .message {
     margin: 2px 0 2px 3%;
     padding: 5px 3px;
     width: 80%;
@@ -204,33 +204,38 @@ input, button, textarea{
     border-radius: 3px;
     background: #fff;
 }
-.chat-input > textarea:focus {
+.chat-input > .message:focus {
     box-shadow: inset 0 0 1px 2px rgba(0,0,0,0.1)
 }
-.chat-input > textarea:active {
+.chat-input > .message:active {
     box-shadow: inset 0 0 1px 2px rgba(0,0,0,0.1)
 }
-.chat-input > button {
+.chat-input > .message::-webkit-scrollbar {
+    width: 1px;
+    background-color: #f5f5f5;
+}
+.chat-input > .message::-webkit-scrollbar-thumb {
+    background-color: #999;
+}
+.chat-input > .message::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+    -moz-box-shadow:  inset 0 0 6px rgba(0, 0, 0, .3);
+    box-shadow:  inset 0 0 6px rgba(0, 0, 0, .3);
+    background-color: #f5f5f5;
+}
+.chat-input > .btn {
     margin: 1px 1.5% 1px 1.5%;
     width: 12%;
     height: 36px;
     float: right;
     border-radius: 6px;
     color: #fff;
+}
+.chat-input > .btn.y {
     background: #12B7F5;
 }
-.chat-input > textarea::-webkit-scrollbar {
-    width: 1px;
-    background-color: #f5f5f5;
-}
-.chat-input > textarea::-webkit-scrollbar-thumb {
-    background-color: #999;
-}
-.chat-input > textarea::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
-    -moz-box-shadow:  inset 0 0 6px rgba(0, 0, 0, .3);
-    box-shadow:  inset 0 0 6px rgba(0, 0, 0, .3);
-    background-color: #f5f5f5;
+.chat-input > .btn.n {
+    background: #DDDEE2;
 }
 .chat-more {
     margin: 0 3%;

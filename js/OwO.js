@@ -23,7 +23,7 @@ var _createClass = function () {
             var a = this;
             _classCallCheck(this, e);
             var s = {
-                logo: "OwOčĄ¨ć",
+                logo: "OwO",
                 container: document.getElementsByClassName("OwO")[0],
                 target: document.getElementsByTagName("textarea")[0],
                 position: "down",
@@ -31,7 +31,8 @@ var _createClass = function () {
                 maxHeight: "250px",
                 api: "https://api.anotherhome.net/OwO/OwO.json"
             };
-            for (var n in s) s.hasOwnProperty(n) && !t.hasOwnProperty(n) && (t[n] = s[n]);
+            for (var n in s)
+                s.hasOwnProperty(n) && !t.hasOwnProperty(n) && (t[n] = s[n]);
             this.container = t.container, this.target = t.target, "up" === t.position && this.container.classList.add("OwO-up");
             var i = new XMLHttpRequest;
             i.onreadystatechange = function () {
@@ -40,7 +41,8 @@ var _createClass = function () {
         }
 
         return _createClass(e, [{
-            key: "init", value: function (e) {
+            key: "init",
+            value: function (e) {
                 var t = this;
                 this.area = e.target, this.packages = Object.keys(this.odata);
                 for (var a = '\n            <div class="OwO-logo"><span>' + e.logo + '</span></div>\n            <div class="OwO-body" style="width: ' + e.width + '">', s = 0; s < this.packages.length; s++) {
@@ -56,7 +58,7 @@ var _createClass = function () {
                     var a = null;
                     if (e.target.classList.contains("OwO-item") ? a = e.target : e.target.parentNode.classList.contains("OwO-item") && (a = e.target.parentNode), a) {
                         var s = t.area.selectionEnd, n = t.area.value;
-                        t.area.value = n.slice(0, s) + a.innerHTML + n.slice(s), t.area.focus(), t.toggle()
+                        t.area.value = n.slice(0, s) + a.innerHTML + n.slice(s), t.area.focus() //t.toggle()
                     }
                 }), this.packagesEle = this.container.getElementsByClassName("OwO-packages")[0];
                 for (var c = function (e) {
@@ -69,11 +71,13 @@ var _createClass = function () {
                 this.tab(0)
             }
         }, {
-            key: "toggle", value: function () {
+            key: "toggle",
+            value: function () {
                 this.container.classList.contains("OwO-open") ? this.container.classList.remove("OwO-open") : this.container.classList.add("OwO-open")
             }
         }, {
-            key: "tab", value: function (e) {
+            key: "tab",
+            value: function (e) {
                 var t = this.container.getElementsByClassName("OwO-items-show")[0];
                 t && t.classList.remove("OwO-items-show"), this.container.getElementsByClassName("OwO-items")[e].classList.add("OwO-items-show");
                 var a = this.container.getElementsByClassName("OwO-package-active")[0];

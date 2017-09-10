@@ -16,7 +16,9 @@ $tcp_table->create();
 
 $user_list = [];
 
-$server = new swoole_websocket_server("0.0.0.0", 9501);
+$host = '0.0.0.0';
+$port = '9501';
+$server = new swoole_websocket_server($host, $port);
 $server->table = $tcp_table;
 $server->users = $user_list;
 
@@ -24,30 +26,37 @@ $server->on('open', function (swoole_websocket_server $server, $request) {
     global $user_list;
     $server->users[$request->fd] = ['fd' => $request->fd];
     $server->table->set($request->fd, ['fd' => $request->fd]); //获取客户端id插入table
-    echo message('info', "用户{$request->fd}连接成功\n", '1');
+    echo message('info', "用户{$request->fd}连接成功\n");
 });
 
 $server->on('message', function (swoole_websocket_server $server, $frame) {
     $fd = $frame->fd;
     $state = $frame->opcode;
     $data = json_decode($frame->data);
-    $id = $data->id;
-    $name = $data->name;
-    $sex = $data->sex;
-    $icon = $data->icon;
+    $id = isset($data->id) ? $data->id: '';
+    $name = isset($data->name) ? $data->name: '';
+    $sex = isset($data->sex) ? $data->sex: '';
+    $icon = isset($data->icon) ? $data->icon: '';
+    $message = isset($data->message) ? $data->message: '';
 
-    $data = [];
+    $result = [];
+
     if($data->type == 'init') {
         $type = 'tips';
-        $data['message'] = "欢迎{$name}进入";
+        $result['message'] = "欢迎{$name}进入";
     } else if($data->type == 'message') {
         $type = 'message';
         $user = $server->users[$fd]['info'];
-
+        $result['id'] = $user['id'];
+        $result['name'] = $user['name'];
+        $result['sex'] = $user['sex'];
+        $result['icon'] = $user['icon'];
+        $result['message'] = $message;
+        echo message('message', "{$user['name']}: {$message}\n");
     } else {
         $type = 'other';
     }
-    $data = ['type' => $type];
+    $result['type'] = $type;
 
     // 保留用户信息
     foreach($server->table as $u) {
@@ -62,7 +71,7 @@ $server->on('message', function (swoole_websocket_server $server, $frame) {
     }
 
     foreach($server->table as $u) {
-        $server->push($u['fd'], json_encode($data));//消息广播给所有客户端
+        $server->push($u['fd'], json_encode($result));//消息广播给所有客户端
     }
 });
 
@@ -71,20 +80,29 @@ $server->on('close', function ($server, $fd) {
 
     foreach($server->table as $u) {
         if(isset($u['fd'])) {
+            $user = $server->users[$fd]['info'];
             $server->push($u['fd'], json_encode([
                 'type' => 'tips',
-                'name' => 'aaa',
-                'message' => "用户{$fd}退出",
+                'name' => $user['name'],
+                'message' => "用户{$user['name']}退出",
                 ]));//消息广播给所有客户端
         }
     }
-    echo message('info', "用户{$fd}退出\n", '1');
+    echo message('info', "用户{$user['id']}退出\n", '1');
 });
 
+echo message('system', "聊天服务器开启 运行在{$host}:{$port}\n");
 $server->start();
 
-function message ($type, $content, $status)
+
+function message ($type, $content)
 {
     $time = date('Y-m-d H:i:s');
-    return $time . ' [' . strtoupper($type) . ']: ' . $content;
+    $data = $time . ' [' . strtoupper($type) . ']: ' . $content;
+
+    $dir = __DIR__.'/log/';
+    $filename = date('Y-m-d').'.log';
+    file_put_contents($dir.$filename, $data, FILE_APPEND);
+
+    return $data;
 }

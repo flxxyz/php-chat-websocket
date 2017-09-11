@@ -7,22 +7,18 @@ class Home extends CI_Controller
 {
     public function index ()
     {
-        redirect('home/login');
-
         if(isset($this->session->id) and
             isset($this->session->name) and
             isset($this->session->sex) and
             isset($this->session->icon)) {
-            header('location: ' . site_url() . '?c=home&m=room');
+            redirect('home/room');
         }
 
-        $this->load->view('Chat/index', ['action' => site_url() . '?c=home&m=login',]);
+        $this->load->view('Chat/index', ['action' => site_url('home/login'),]);
     }
 
     public function login ()
     {
-        echo 1;
-        return '';
         $this->session->id = mt_rand(1000, 1999);
         $this->session->name = $this->input->get('username');
         $this->session->sex = $this->input->get('sex');
@@ -34,7 +30,7 @@ class Home extends CI_Controller
 
         $this->session->icon = $imageDataUri;
 
-        header('location: ' . site_url() . '?c=home&m=room');
+        redirect('home/room');
     }
 
     public function logout()
@@ -44,7 +40,7 @@ class Home extends CI_Controller
         $this->session->unset_userdata('sex');
         $this->session->unset_userdata('icon');
 
-        header('location: ' . site_url() . '?c=home&m=index');
+        redirect('home/index');
     }
 
     public function room ()
@@ -53,7 +49,7 @@ class Home extends CI_Controller
             isset($this->session->name) and
             isset($this->session->sex) and
             isset($this->session->icon) )) {
-            header('location: ' . site_url() . '?c=home&m=index');
+            redirect('home/index');
         }
 
         $sess = $this->session;

@@ -23,14 +23,14 @@ $(function() {
     }
 
     function selfMessage(id) {
-        if (data.id == parseInt(id)) {
+        if (user.id == parseInt(id)) {
             return 'chat-me';
         }
         return 'chat-ta';
     }
 
     function getSexInfo(n) {
-        switch (n) {
+        switch (parseInt(n)) {
             case 0:
                 return {
                     class: 'female',

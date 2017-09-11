@@ -56,10 +56,10 @@
 
 <script>
     const user = {
-        id: '<?= @$_SESSION['id'] ?>',
-        name: '<?= @$_SESSION['name'] ?>',
-        sex: '<?= @$_SESSION['sex'] ?>',
-        icon: '<?= @$_SESSION['icon'] ?>',
+        id: '<?= $sess['id'] ?>',
+        name: '<?= $sess['name'] ?>',
+        sex: '<?= $sess['sex'] ?>',
+        icon: '<?= $sess['icon'] ?>',
     };
 </script>
 </body>

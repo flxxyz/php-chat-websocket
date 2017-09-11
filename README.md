@@ -1,6 +1,7 @@
 # php-chat-websocket
 
 这是一个基础聊天室，使用session区分各个用户，使用identicon来做随机头像
+
 ps:不清楚identicon的可以看看[identicon wiki][1]
 
 ## Init

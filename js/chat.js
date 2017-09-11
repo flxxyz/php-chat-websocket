@@ -30,7 +30,7 @@ $(function() {
     }
 
     function getSexInfo(n) {
-        switch (n) {
+        switch (parseInt(n)) {
             case 0:
                 return {
                     class: 'female',

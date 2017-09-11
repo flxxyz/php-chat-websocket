@@ -5,12 +5,12 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Title</title>
-    <link rel="stylesheet" href="static/css/chat.css">
-    <link rel="stylesheet" href="static/css/s.css">
-    <link rel="stylesheet" href="http://chat.0x1.ren/css/OwO.css">
+    <link rel="stylesheet" href="/static/css/chat.css">
+    <link rel="stylesheet" href="/static/css/s.css">
+    <link rel="stylesheet" href="/static/css/OwO.css">
     <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
-    <script src="static/js/OwO.js"></script>
-    <script src="static/js/chat.js"></script>
+    <script src="/static/js/OwO.js"></script>
+    <script src="/static/js/chat.js"></script>
 </head>
 <body>
 <header id="chat-header">
@@ -45,7 +45,7 @@
                 logo: '表情',
                 container: $('.OwO').get(0),
                 target: $('.chat-input>.message').get(0),
-                api: 'js/OwO.json',
+                api: '/static/js/OwO.json',
                 position: 'down',
                 width: '100%',
                 maxHeight: '250px'

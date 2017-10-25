@@ -16,7 +16,7 @@ composer update
    $config['base_url'] = "你的域名";
    ```
 
-2. 修改`ci/static/js/chat.js` **129行**为websocket链接🔗
+2. 修改`ci/static/js/chat.js` **137行**为websocket链接🔗
    ```javascript
    const socket = new WebSocket('ws://你的域名:9501');
    ```

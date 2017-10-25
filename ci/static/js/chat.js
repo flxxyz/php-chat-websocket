@@ -23,7 +23,7 @@ $(function() {
     }
 
     function selfMessage(id) {
-        if (data.id == parseInt(id)) {
+        if (user.id == parseInt(id)) {
             return 'chat-me';
         }
         return 'chat-ta';
@@ -50,11 +50,19 @@ $(function() {
     }
 
     function send(message, type = 'message') {
+        if(message != '') {
+            $('.message').val('');
+            $('.btn').attr('class', 'btn n');
+        }else {
+            $('.message').focus();
+            return;
+        }
+
         var $data = {
             message: message,
             type: type,
         };
-        $('.message').val('');
+
         if(socket.readyState === 3) {
             alert('连接服务器失败，请联系管理员开启~');
             return;
@@ -126,13 +134,9 @@ $(function() {
         })
     }, 600)
 
-    const socket = new WebSocket('ws://127.0.0.1:9501');
+    var socket = new ReconnectingWebSocket('ws://127.0.0.1:9501', null, {debug: true, reconnectInterval: 2000, timeoutInterval: 3000});
 
     socket.addEventListener('open', function (event) {
-        if(socket.readyState === 3) {
-            alert('连接服务器失败，请联系管理员开启~');
-            return;
-        }
         if(!user.id) {
             return;
         }
@@ -147,9 +151,13 @@ $(function() {
         }
         user.type = 'init';
         socket.send(JSON.stringify(user));
-    });
+    })
 
     socket.addEventListener('message', function (event) {
+        if(socket.readyState === 1 && lowConnect) {
+            //alert('欢迎回来👏');
+        }
+
         var $data = JSON.parse(event.data);
         var $message = $data.message;
         if ($data.type === 'tips') {
@@ -171,19 +179,16 @@ $(function() {
         }
     })
 
+    var lowConnect = false;
     socket.addEventListener('close', function (event) {
-        //console.log(event);
-        if(socket.readyState === 3) {
+        if(socket.readyState === 0 && lowConnect) {
+            alert('连接服务器失败，请联系管理员开启~');
+        }else if(socket.readyState === 0) {
             alert('服务器关闭，断开连接辣~');
-            return '';
         }
     })
 
     socket.addEventListener('error', function (event) {
-        //console.log(event);
-        if(socket.readyState === 3) {
-            alert('服务器开小差了，刷新试试咩~');
-            return false;
-        }
+        lowConnect = true;
     })
 })

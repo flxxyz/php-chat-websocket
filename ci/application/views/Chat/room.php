@@ -11,6 +11,7 @@
     <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
     <script src="/static/js/OwO.js"></script>
     <script src="/static/js/chat.js"></script>
+    <script src="/static/js/Reconnect.js"></script>
 </head>
 <body>
 <header id="chat-header">
@@ -36,7 +37,7 @@
 <footer id="chat-footer">
     <div class="chat-input">
         <textarea class="message" type="text"></textarea>
-        <button class="btn" type="button">发送</button>
+        <button class="btn n" type="button">发送</button>
     </div>
     <div class="chat-more">
         <div class="OwO"></div>
@@ -55,7 +56,7 @@
 </footer>
 
 <script>
-    const user = {
+    var user = {
         id: '<?= $sess['id'] ?>',
         name: '<?= $sess['name'] ?>',
         sex: '<?= $sess['sex'] ?>',

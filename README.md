@@ -11,10 +11,16 @@ composer update
 ```
 
 ## Usage
-修改```ci/application/config/config.php```为:
-```
-$config['base_url'] = "你的DOMAIN";
-```
+1. 修改 `ci/application/config/config.php` 26行
+   ```php
+   $config['base_url'] = "你的域名";
+   ```
+
+2. 修改`ci/static/js/chat.js` **129行**为websocket链接🔗
+   ```javascript
+   const socket = new WebSocket('ws://你的域名:9501');
+   ```
+
 
 ## Run
 ```shell

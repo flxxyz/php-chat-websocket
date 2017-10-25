@@ -14,10 +14,8 @@ $host = '0.0.0.0';
 $port = '9501';
 $server = new swoole_websocket_server($host, $port);
 $user_list = [];
-$server->users = $user_list;
 
 $server->on('open', function (swoole_websocket_server $server, $request) {
-    global $user_list;
     $server->users[$request->fd] = ['fd' => $request->fd];  //获取客户端id插入table
     echo message('info', "第{$request->fd}个连接, 创建成功\n");
 });

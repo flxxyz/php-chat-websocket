@@ -1,4 +1,6 @@
 .DS_Store
+.*
+!.htaccess
 
 application/cache/*
 !application/cache/index.html

@@ -1,7 +1,7 @@
-# Created by .ignore support plugin (hsz.mobi)
-
-/.idea
+.DS_Store
+!.htaccess
 /log/*
 !/log/README.md
-.*
-!.gitignore
+composer.lock
+.idea/*
+/vendor

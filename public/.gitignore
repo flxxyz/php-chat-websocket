@@ -1,6 +1,9 @@
 .DS_Store
 .*
 !.htaccess
+/log/*
+!/log/README.md
+!.gitignore
 
 application/cache/*
 !application/cache/index.html

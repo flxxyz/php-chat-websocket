@@ -134,7 +134,7 @@ $(function() {
         })
     }, 600)
 
-    var socket = new ReconnectingWebSocket('ws://127.0.0.1:9501', null, {debug: true, reconnectInterval: 2000, timeoutInterval: 3000});
+    var socket = new ReconnectingWebSocket('ws://127.0.0.1:9501', null, {debug: false, reconnectInterval: 2000, timeoutInterval: 3000});
 
     socket.addEventListener('open', function (event) {
         if(!user.id) {

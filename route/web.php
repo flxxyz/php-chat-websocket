@@ -1,6 +1,6 @@
 <?php
 
-use App\Controller\RoomController;
+use Chat\Controller\RoomController;
 
 $route->group('/', function() {
     $this->get('/', [new RoomController, 'index']);

@@ -1,4 +1,5 @@
 .DS_Store
+!log/.gitignore
 log/*
 .idea/*
 vendor/

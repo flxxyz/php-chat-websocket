@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controller;
+namespace Chat\Controller;
 
 use Identicon\Identicon;
 
@@ -8,7 +8,7 @@ class RoomController extends Controller
 {
     public function index() {
         if(is_null(session()->get('id')) && is_null(session()->get('name')) && is_null(session()->get('sex')) && is_null(session()->get('icon'))) {
-                redirect($this->config['url']);
+            //redirect($this->config['url']);
         }
         
         view('index');
@@ -23,7 +23,7 @@ class RoomController extends Controller
         $identicon = new Identicon();
         //$identicon->displayImage($this->session->name);
         //$imageData = $identicon->getImageData('bar');
-        $imageDataUri = $identicon->getImageDataUri($this->session->name);
+        $imageDataUri = $identicon->getImageDataUri(session()->get('name'));
 
         session()->set(['icon' => $imageDataUri]);
         
@@ -41,7 +41,7 @@ class RoomController extends Controller
     
     public function room() {
         if(is_null(session()->get('id')) && is_null(session()->get('name')) && is_null(session()->get('sex')) && is_null(session()->get('icon'))) {
-                redirect($this->config['url']);
+            redirect($this->config['url']);
         }
         
         view('room', [

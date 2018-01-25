@@ -1,5 +1,6 @@
 <?php
 require_once './vendor/autoload.php';
+require_once './vendor/flxxyz/col/src/Common/function.php';
 
 use Chat\WebSocket;
 

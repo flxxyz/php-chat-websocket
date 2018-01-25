@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controller;
+namespace Chat\Controller;
 
 use Col\Controller as BaseController;
 

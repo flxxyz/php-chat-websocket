@@ -1,0 +1,229 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "908099045e2da955f9f998906e2ab3ae",
+    "packages": [
+        {
+            "name": "flxxyz/col",
+            "version": "0.0.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/flxxyz/Col.git",
+                "reference": "06e284cade5bb6c360bdff053dc5982f0b97b7d9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/flxxyz/Col/zipball/06e284cade5bb6c360bdff053dc5982f0b97b7d9",
+                "reference": "06e284cade5bb6c360bdff053dc5982f0b97b7d9",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0",
+                "php-curl-class/php-curl-class": "^8.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Col\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "flxxyz",
+                    "email": "i@0bug.work",
+                    "homepage": "https://toyou.ren"
+                }
+            ],
+            "description": "This is a simple PHP framework",
+            "homepage": "http://github.com/flxxyz/Col",
+            "keywords": [
+                "Simple",
+                "framework",
+                "php"
+            ],
+            "time": "2018-01-22T15:56:32+00:00"
+        },
+        {
+            "name": "monolog/monolog",
+            "version": "1.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Seldaek/monolog.git",
+                "reference": "d16496318c3e08e3bccfc3866e104e49cf25488a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/d16496318c3e08e3bccfc3866e104e49cf25488a",
+                "reference": "d16496318c3e08e3bccfc3866e104e49cf25488a",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "mlehner/gelf-php": "1.0.*"
+            },
+            "suggest": {
+                "ext-amqp": "Allow sending log messages to an AMQP server (1.0+ required)",
+                "ext-mongo": "Allow sending log messages to a MongoDB server",
+                "mlehner/gelf-php": "Allow sending log messages to a GrayLog2 server"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.3.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Monolog": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jordi Boggiano",
+                    "email": "j.boggiano@seld.be",
+                    "homepage": "http://seld.be",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Logging for PHP 5.3",
+            "homepage": "http://github.com/Seldaek/monolog",
+            "keywords": [
+                "log",
+                "logging"
+            ],
+            "time": "2012-08-29T11:53:20+00:00"
+        },
+        {
+            "name": "php-curl-class/php-curl-class",
+            "version": "8.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-curl-class/php-curl-class.git",
+                "reference": "dc8282d086362d946520781c8908e0b084f01438"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-curl-class/php-curl-class/zipball/dc8282d086362d946520781c8908e0b084f01438",
+                "reference": "dc8282d086362d946520781c8908e0b084f01438",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "php": ">=5.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "*",
+                "squizlabs/php_codesniffer": "*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Curl\\": "src/Curl/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Unlicense"
+            ],
+            "authors": [
+                {
+                    "name": "Zach Borboa"
+                }
+            ],
+            "description": "PHP Curl Class makes it easy to send HTTP requests and integrate with web APIs.",
+            "homepage": "https://github.com/php-curl-class/php-curl-class",
+            "keywords": [
+                "api",
+                "class",
+                "client",
+                "curl",
+                "framework",
+                "http",
+                "http client",
+                "json",
+                "php",
+                "requests",
+                "rest",
+                "restful",
+                "web service",
+                "xml"
+            ],
+            "time": "2017-11-02T06:07:25+00:00"
+        },
+        {
+            "name": "yzalis/identicon",
+            "version": "1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/yzalis/Identicon.git",
+                "reference": "228eca74299a45163be40fd82d334bf21e66b86b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/yzalis/Identicon/zipball/228eca74299a45163be40fd82d334bf21e66b86b",
+                "reference": "228eca74299a45163be40fd82d334bf21e66b86b",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.0"
+            },
+            "require-dev": {
+                "ext-imagick": "*",
+                "fzaninotto/faker": "^1.2.0",
+                "phpunit/phpunit": "^4.0 || ^5.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.2-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Identicon\\": "src/Identicon/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Benjamin Laugueux",
+                    "email": "benjamin@yzalis.com"
+                }
+            ],
+            "description": "Create awesome unique avatar.",
+            "homepage": "http://identicon-php.org",
+            "keywords": [
+                "avatar",
+                "identicon",
+                "image"
+            ],
+            "time": "2017-08-01T14:39:05+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": {
+        "php": ">=7.0.0"
+    },
+    "platform-dev": []
+}

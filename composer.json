@@ -1,13 +1,15 @@
 {
   "name": "php-chat-websocket",
-  "version": "1.1",
+  "version": "2.0",
   "require": {
     "php": ">=7.0.0",
-    "monolog/monolog": "1.2.*"
+    "monolog/monolog": "1.2.*",
+    "yzalis/identicon": "^1.2",
+    "flxxyz/col": "*"
   },
   "autoload": {
     "psr-4": {
-      "Chat\\": "core/"
+      "Chat\\": "app/"
     }
   }
 }

@@ -1,7 +1,4 @@
 .DS_Store
-!.htaccess
-/log/*
-!/log/README.md
-composer.lock
+log/*
 .idea/*
-/vendor
+vendor/

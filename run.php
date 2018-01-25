@@ -6,4 +6,4 @@ require_once 'handle.php';
  * @param string host (default '0.0.0.0')
  * @param int port (default 9501)
  */
-Chat::run();
+Chat::run('0.0.0.0', 9501);

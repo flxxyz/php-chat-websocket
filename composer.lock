@@ -4,25 +4,26 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "908099045e2da955f9f998906e2ab3ae",
+    "content-hash": "a00a36b9bf8429d0767d74927ab883a5",
     "packages": [
         {
             "name": "flxxyz/col",
-            "version": "0.0.5",
+            "version": "0.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/flxxyz/Col.git",
-                "reference": "06e284cade5bb6c360bdff053dc5982f0b97b7d9"
+                "reference": "370247b70a47b8a4b1093f2c7a4dcd405b38fc49"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/flxxyz/Col/zipball/06e284cade5bb6c360bdff053dc5982f0b97b7d9",
-                "reference": "06e284cade5bb6c360bdff053dc5982f0b97b7d9",
+                "url": "https://files.phpcomposer.com/files/flxxyz/Col/370247b70a47b8a4b1093f2c7a4dcd405b38fc49.zip",
+                "reference": "370247b70a47b8a4b1093f2c7a4dcd405b38fc49",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.0",
-                "php-curl-class/php-curl-class": "^8.0"
+                "php-curl-class/php-curl-class": "^8.0",
+                "vrana/notorm": "dev-master"
             },
             "type": "library",
             "autoload": {
@@ -46,9 +47,64 @@
             "keywords": [
                 "Simple",
                 "framework",
-                "php"
+                "notorm",
+                "php",
+                "简单框架"
             ],
-            "time": "2018-01-22T15:56:32+00:00"
+            "time": "2018-03-01T03:29:33+00:00"
+        },
+        {
+            "name": "gregwar/captcha",
+            "version": "v1.1.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Gregwar/Captcha.git",
+                "reference": "1d06ac8e12d2b3e0df39586d78b9f50e086a0bea"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://files.phpcomposer.com/files/Gregwar/Captcha/1d06ac8e12d2b3e0df39586d78b9f50e086a0bea.zip",
+                "reference": "1d06ac8e12d2b3e0df39586d78b9f50e086a0bea",
+                "shasum": ""
+            },
+            "require": {
+                "ext-gd": "*",
+                "ext-mbstring": "*",
+                "php": ">=5.3.0",
+                "symfony/finder": "~3.0|~4.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^6.4"
+            },
+            "type": "captcha",
+            "autoload": {
+                "psr-4": {
+                    "Gregwar\\": "src/Gregwar"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Grégoire Passault",
+                    "email": "g.passault@gmail.com",
+                    "homepage": "http://www.gregwar.com/"
+                },
+                {
+                    "name": "Jeremy Livingston",
+                    "email": "jeremy.j.livingston@gmail.com"
+                }
+            ],
+            "description": "Captcha generator",
+            "homepage": "https://github.com/Gregwar/Captcha",
+            "keywords": [
+                "bot",
+                "captcha",
+                "spam"
+            ],
+            "time": "2017-12-30T16:18:44+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -108,16 +164,16 @@
         },
         {
             "name": "php-curl-class/php-curl-class",
-            "version": "8.0.0",
+            "version": "8.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-curl-class/php-curl-class.git",
-                "reference": "dc8282d086362d946520781c8908e0b084f01438"
+                "reference": "bdfe1fcca0c32562050c84e01e3a4cbdc31e22fd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-curl-class/php-curl-class/zipball/dc8282d086362d946520781c8908e0b084f01438",
-                "reference": "dc8282d086362d946520781c8908e0b084f01438",
+                "url": "https://api.github.com/repos/php-curl-class/php-curl-class/zipball/bdfe1fcca0c32562050c84e01e3a4cbdc31e22fd",
+                "reference": "bdfe1fcca0c32562050c84e01e3a4cbdc31e22fd",
                 "shasum": ""
             },
             "require": {
@@ -161,7 +217,95 @@
                 "web service",
                 "xml"
             ],
-            "time": "2017-11-02T06:07:25+00:00"
+            "time": "2018-01-27T15:40:39+00:00"
+        },
+        {
+            "name": "symfony/finder",
+            "version": "v4.0.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/finder.git",
+                "reference": "552e244df10237f845a94fd64b194f848805e34b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://files.phpcomposer.com/files/symfony/finder/552e244df10237f845a94fd64b194f848805e34b.zip",
+                "reference": "552e244df10237f845a94fd64b194f848805e34b",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Finder\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Finder Component",
+            "homepage": "https://symfony.com",
+            "time": "2018-02-11T17:17:44+00:00"
+        },
+        {
+            "name": "vrana/notorm",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/vrana/notorm.git",
+                "reference": "e49d5d2f1bfe440dc82b61f46172635dfcb6f6dd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/vrana/notorm/zipball/e49d5d2f1bfe440dc82b61f46172635dfcb6f6dd",
+                "reference": "e49d5d2f1bfe440dc82b61f46172635dfcb6f6dd",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "NotORM.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0",
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Jakub Vrana",
+                    "homepage": "http://www.vrana.cz/"
+                }
+            ],
+            "description": "NotORM is a PHP library for simple working with data in the database.",
+            "homepage": "http://www.notorm.com/",
+            "keywords": [
+                "database",
+                "dbal"
+            ],
+            "time": "2014-10-30T16:55:08+00:00"
         },
         {
             "name": "yzalis/identicon",
@@ -219,7 +363,9 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "vrana/notorm": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

@@ -5,13 +5,12 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>房间内 | php-chat-websockt</title>
-    <link rel="stylesheet" href="/static/css/chat.css">
-    <link rel="stylesheet" href="/static/css/s.css">
-    <link rel="stylesheet" href="/static/css/OwO.css">
+    <link rel="stylesheet" href="/css/chat.css">
+    <link rel="stylesheet" href="/css/s.css">
+    <link rel="stylesheet" href="/css/OwO.css">
     <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
-    <script src="/static/js/OwO.js"></script>
-    <script src="/static/js/chat.js"></script>
-    <script src="/static/js/Reconnect.js"></script>
+    <script src="/js/OwO.js"></script>
+    <script src="/js/Reconnect.js"></script>
 </head>
 <body>
 <header id="chat-header">
@@ -46,7 +45,7 @@
                 logo: '表情',
                 container: $('.OwO').get(0),
                 target: $('.chat-input>.message').get(0),
-                api: '/static/js/OwO.json',
+                api: '/js/OwO.json',
                 position: 'down',
                 width: '100%',
                 maxHeight: '250px'
@@ -63,5 +62,6 @@
         icon: '<?= _e($user['icon']); ?>',
     };
 </script>
+<?php view('js') ?>
 </body>
 </html>

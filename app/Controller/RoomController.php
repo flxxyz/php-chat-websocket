@@ -36,12 +36,13 @@ class RoomController extends Controller
         unset($_SESSION['sex']);
         unset($_SESSION['icon']);
 
+        sleep(1);
         redirect($this->config['url']);
     }
     
     public function room() {
         if(is_null(session()->get('id')) && is_null(session()->get('name')) && is_null(session()->get('sex')) && is_null(session()->get('icon'))) {
-            redirect($this->config['url']);
+            return redirect($this->config['url']);
         }
         
         view('room', [

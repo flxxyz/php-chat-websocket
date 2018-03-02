@@ -83,6 +83,7 @@ input, button, textarea{
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
+    background: #fff;
 }
 .chat-info {
     font-size: .3em;

@@ -77,19 +77,19 @@ class WebSocket
             $result['type'] = $type;
 
             // 保留用户信息
-            foreach ($server->users as $u) {
-                if (!isset($server->users[$u['fd']]['info'])) {
-                    $server->users[$u['fd']]['info'] = [
-                        'id' => $id,
+            foreach ($server->users as $user) {
+                if (!isset($server->users[$user['fd']]['info'])) {
+                    $server->users[$user['fd']]['info'] = [
+                        'id'   => $id,
                         'name' => $name,
-                        'sex' => $sex,
+                        'sex'  => $sex,
                         'icon' => $icon,
                     ];
                 }
             }
 
-            foreach ($server->users as $u) {
-                $server->push($u['fd'], json_encode($result));//消息广播给所有客户端
+            foreach ($server->users as $user) {
+                $server->push($user['fd'], json_encode($result));//消息广播给所有客户端
             }
         });
     }
@@ -101,29 +101,30 @@ class WebSocket
     {
         $this->serve->on('close', function (swoole_websocket_server $server, $fd) {
             $users = $server->users;
-            foreach($users as $user) {
-                if(isset($user['fd'])) {
+            $name = '';
+            foreach ($users as $user) {
+                if (isset($user['fd'])) {
                     $userInfo = $users[$fd]['info'];
                     $server->push($user['fd'], json_encode([
-                        'type' => 'tips',
-                        'name' => $userInfo['name'],
+                        'type'    => 'tips',
+                        'name'    => $userInfo['name'],
                         'message' => "用户{$userInfo['name']}退出",
                     ]));//消息广播给所有客户端(除自己)
+                    $name = $userInfo['name'];
                 }
             }
 
-            unset($server->users[$fd]);  // 清除用户信息
-
             // 记录用户退出
-            $message = "用户{$server->users['id']}退出";
-            Log::notice('user', $message);
+            $message = "用户{$name}退出";
+            Log::info('user', $message);
         });
     }
 
     /**
      * 调用websocket
      */
-    public function start() {
+    public function start()
+    {
         // 记录系统
         $message = "websocket服务器运行在";
         Log::info('system', $message, ['host' => $this->host, 'port' => $this->port]);

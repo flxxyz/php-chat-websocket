@@ -7,8 +7,7 @@ ps:不清楚identicon的可以看看[identicon wiki][1]
 ## Init
 依次执行下面命令
 ```shell
-git clone https://github.com/flxxyz/php-chat-websocket.git
-cd php-chat-websocket
+git clone https://github.com/flxxyz/php-chat-websocket.git && cd php-chat-websocket
 composer update --no-dev
 ```
 
@@ -18,7 +17,7 @@ composer update --no-dev
    'url' => 'http://domain/',  //保留最后的斜杠
    ```
 
-2. 修改`public/static/js/chat.js` **137行**为websocket链接🔗
+2. 修改`app/view/js.view.php` **155行**为websocket链接🔗
    ```javascript
    var socket = new ReconnectingWebSocket('ws://你的域名:9501', null, {debug: false, reconnectInterval: 2000, timeoutInterval: 3000});
    ```
@@ -35,8 +34,8 @@ composer update --no-dev
    
    如需要后台挂起服务看这里↓
    ```shell
-   chmod +x run.sh
-   ./run.sh
+   chmod +x start_chat.sh
+   ./start_chat.sh
    ```
 
 5. 伪静态设置
@@ -52,7 +51,6 @@ composer update --no-dev
 | 路径 | 说明 |
 |:---  |:---   |
 | /   | 首页界面 |
-| /login | 登陆界面 |
 | /logout | 注销当前登陆用户  |
 | /room | 房间界面  |
 

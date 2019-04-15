@@ -3,15 +3,15 @@
   "version": "2.0",
   "require": {
     "php": ">=7.0.0",
-    "monolog/monolog": "1.2.*",
     "yzalis/identicon": "^1.2",
     "gregwar/captcha": "1.*",
-    "flxxyz/col": "*",
-    "vrana/notorm": "dev-master"
+    "flxxyz/swoole-websocket-and-tcp-and-udp": "dev-master"
   },
   "autoload": {
     "psr-4": {
-      "Chat\\": "app/"
-    }
-  }
+      "Chat\\": "src/"
+    },
+    "files": []
+  },
+  "minimum-stability": "dev"
 }
